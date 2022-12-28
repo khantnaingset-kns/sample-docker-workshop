@@ -1,10 +1,8 @@
-FROM node:10.15.2-alpine
-
-ENV PORT=3000
+FROM node:19-alpine
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY . .
 
 RUN npm install
 
