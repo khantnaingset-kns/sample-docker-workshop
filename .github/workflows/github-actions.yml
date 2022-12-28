@@ -10,5 +10,8 @@ jobs:
         with:
           node-version: 16
       - run: npm install
-  
-     
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: user/app:latest
